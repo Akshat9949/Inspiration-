@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Inspiration: Mahadev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #121212;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0;
+        }
+
+        nav {
+            background-color: #1a237e;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ffb300;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffb300;
+        }
+
+        .hero {
+            background-color: #0d0d21;
+            text-align: center;
+            padding: 120px 20px;
+            color: white;
+            border-bottom: 5px solid #ffb300;
+            position: relative; 
+            overflow: hidden; 
+            
+            --center-x: 50%;
+            --center-y: 50%;
+            background: radial-gradient(
+                circle 1200px at var(--center-x) var(--center-y), 
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(25, 25, 40, 0.9) 50%,
+                #0d0d21 100%
+            );
+            transition: background 0.1s; 
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px #000000; 
+            position: relative; 
+            z-index: 1; 
+        }
+
+        .hero p {
+            font-size: 22px;
+            color: #b3e5fc;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .button {
+            background-color: #ffb300;
+            color: #1a237e;
+            padding: 14px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: bold;
+            box-shadow: 0 6px #e65100;
+            font-size: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .button:hover {
+            background-color: #ffc107;
+            transform: translateY(1px);
+            box-shadow: 0 4px #e65100;
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+        }
+
+        section {
+            padding: 40px 30px;
+            margin-bottom: 40px;
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #b3e5fc;
+            font-size: 34px;
+            text-align: center;
+            margin-bottom: 35px;
+            border-bottom: 3px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .about-flex {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-flex img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ffb300;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-flex p {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #e0e0e0;
+        }
+
+        .pathways-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .pathway-card {
+            background-color: #292929;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 48%;
+            border-left: 5px solid #ffb300;
+            transition: background-color 0.3s;
+        }
+
+        .pathway-card:hover {
+            background-color: #383838;
+        }
+
+        .pathway-card h3 {
+            color: #ffb300;
+            margin-top: 0;
+        }
+
+        .symbolism-flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .symbolism-flex img {
+            width: 30%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .sketch-box {
+            width: 35%;
+            text-align: center;
+            background-color: #331f00;
+            padding: 20px;
+            border: 3px dashed #ffb300;
+            border-radius: 10px;
+        }
+
+        .sketch-box svg {
+            margin-top: 10px;
+        }
+        
+        .sketch-box svg text {
+            fill: #ffb300;
+        }
+
+        .shadow-section {
+            background: url('https://placehold.co/1200x400/0a0a0a/0a0a0a?text=MAHADEV+AND+NANDI') no-repeat center center / cover;
+            height: 400px; 
+            margin-bottom: 40px;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .shadow-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); 
+            z-index: 0;
+        }
+
+        .shadow-section .caption {
+            position: relative;
+            z-index: 1;
+            color: white;
+            font-size: 2.5em;
+            text-align: center;
+            padding-top: 150px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+        }
+
+        .facts-table {
+            width: 70%;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+
+        .facts-table, .facts-table th, .facts-table td {
+            border: 1px solid #444;
+            color: #e0e0e0;
+        }
+
+        .facts-table th, .facts-table td {
+            padding: 14px;
+            text-align: left;
+        }
+
+        .facts-table th {
+            background-color: #1a237e;
+            color: white;
+            font-weight: 600;
+        }
+
+        .facts-table tr:nth-child(even) {
+            background-color: #242424;
+        }
+        
+        .facts-table tr:nth-child(odd) {
+            background-color: #1e1e1e;
+        }
+
+        footer {
+            background-color: #1a237e;
+            text-align: center;
+            padding: 25px;
+            color: #ffb300;
+            font-size: 16px;
+            border-top: 5px solid #ffb300;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">DIVINE.INSPIRATION</div>
+        <ul>
+            <li><a href="#about">Mahadev</a></li>
+            <li><a href="#pathways">Pathways</a></li>
+            <li><a href="#symbolism">Symbols</a></li>
+            <li><a href="#facts">Facts</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Om Namah Shivaya</h1>
+            <p>The source of my strength, wisdom, and calm is the great Lord Shiva.</p>
+            <a href="#pathways" class="button">Explore Adiyogi's Pathways</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section id="about">
+            <h2>Mahadev: The Supreme Yogi</h2>
+            <div class="about-flex">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5Vu9UCx6m6cayhGdGTrDRneLsbwZORJkiA&s" alt="Lord Shiva">
+                <p>
+                    Mahadev inspires me because he represents a balance of immense power and absolute detachment. He is the destroyer of evil and ignorance, but also the most compassionate. As a student navigating complex studies, his qualities of patience, meditation, and control over emotions are my guiding principles. He teaches us that change is the only constant, and transformation is essential for growth.
+                </p>
+            </div>
+        </section>
+
+        <div class="shadow-section">
+            <div class="caption">Mahadev and Nandi: Eternal Journey</div>
+        </div>
+
+        <section id="pathways">
+            <h2>Adiyogi's Seven Pathways to Liberation</h2>
+            <div class="pathways-grid">
+                <div class="pathway-card">
+                    <h3>1. Yoga and Meditation (Dhyana)</h3>
+                    <p>The most prominent pathway from Shiva is the science of Yoga and meditation. This path teaches humans how to calm the mind, develop focus, and connect with their inner self (Shiva, or the Universal Consciousness) to attain tranquility and self-realization.</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>2. Path of Knowledge (Jnana Shakti)</h3>
+                    <p>Shiva emphasizes the pursuit of knowledge and wisdom over ignorance. The third eye represents the destruction of ignorance and the attainment of higher, multidimensional awareness that sees beyond the material world and illusion (Maya).</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>3. Detachment and Renunciation (Vairagya)</h3>
+                    <p>Shiva's ascetic lifestyle is a direct teaching on non-attachment to material possessions and worldly desires. This path encourages individuals to find contentment and happiness within themselves, rather than from external dependencies, which is a crucial step towards liberation.</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>4. Destruction of Ego and Negativity</h3>
+                    <p>Shiva is the destroyer of evil, ignorance, and the ego (Ahankara). He teaches that the dissolution of the ego is necessary for spiritual growth and peace. Devotees are encouraged to conquer their minds and control negative thoughts and actions (such as anger, lust, and greed).</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>5. Truthfulness and Righteous Conduct (Dharma)</h3>
+                    <p>Shiva stated that the greatest virtue is to be truthful and honorable, while the biggest sin is dishonesty. This pathway stresses the importance of integrity, righteous actions, and moral conduct in life.</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>6. Awakening of Kundalini Shakti</h3>
+                    <p>The pathway involves awakening this inner "supreme power" through spiritual practices (like yoga and meditation) so it can ascend through the chakras and unite with Shiva (pure consciousness) at the crown, leading to profound spiritual experiences and connection with universal consciousness.</p>
+                </div>
+                <div class="pathway-card" style="width: 100%;">
+                    <h3>7. Devotion and Surrender (Bhakti and Sharanagati)</h3>
+                    <p>While offering deep philosophical paths, Shiva is also known for his compassion towards his devotees, who can receive his grace through unwavering faith and surrender. Chanting mantras like "Om Namah Shivaya" is a powerful and direct method for invoking his blessings.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="symbolism">
+            <h2>Symbolism & Sketch</h2>
+            <div class="symbolism-flex">
+                <p>
+                    Every symbol associated with Mahadev carries a profound meaning. The crescent moon on his head signifies control over the mind, the Ganga river flowing from his hair symbolizes purity, and the third eye represents knowledge and spiritual awakening. These symbols motivate me to seek deeper understanding in everything I do.
+                </p>
+                
+                <div class="sketch-box">
+                    <h3>The Trishula</h3>
+                    <svg width="250" height="200" viewBox="0 0 250 200">
+                        <line x1="125" y1="30" x2="125" y2="180" stroke="#a9a9a9" stroke-width="8" stroke-linecap="round"/>
+                        <line x1="125" y1="30" x2="100" y2="70" stroke="#ffb300" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="125" y1="30" x2="150" y2="70" stroke="#ffb300" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="125" y1="30" x2="125" y2="60" stroke="#ffb300" stroke-width="5" stroke-linecap="round"/>
+                        <text x="125" y="195" font-family="Arial" font-size="16" fill="#ffb300" text-anchor="middle">THE TRIDENT</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="facts">
+            <h2>Simple Facts</h2>
+            <table class="facts-table">
+                <thead>
+                    <tr>
+                        <th>Concept</th>
+                        <th>Representation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name Meaning</td>
+                        <td>Maha (Great) + Dev (God)</td>
+                    </tr>
+                    <tr>
+                        <td>Cosmic Role</td>
+                        <td>The Destroyer (of evil and illusion)</td>
+                    </tr>
+                    <tr>
+                        <td>Mount</td>
+                        <td>Nandi (The Bull)</td>
+                    </tr>
+                    <tr>
+                        <td>Residence</td>
+                        <td>Mount Kailash</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Har Har Mahadev | My Inspiration</p>
+    </footer>
+
+    <script>
+        const hero = document.querySelector('.hero');
+        
+        document.addEventListener('mousemove', (e) => {
+            const rect = hero.getBoundingClientRect();
+            
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const xPercent = (x / rect.width) * 100;
+            const yPercent = (y / rect.height) * 100;
+
+            hero.style.setProperty('--center-x', `${xPercent}%`);
+            hero.style.setProperty('--center-y', `${yPercent}%`);
+        });
+    </script>
+
+</body>
+</html>
